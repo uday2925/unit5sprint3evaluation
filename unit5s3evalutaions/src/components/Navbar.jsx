@@ -1,8 +1,11 @@
+import { useState } from "react";
 import {Link} from "react-router-dom"
 
 
 
 export const Navbar = () => {
+    const [login,setLogin]=useState(false)
+
     return (
       <div className="navbar">
         <Link className="nav-home" to="/">
@@ -15,13 +18,13 @@ export const Navbar = () => {
           Admin
         </Link>
         {/* Show Either logout or login based on auth context. DO NOT show both */}
-        <Link className="nav-logout" to="/logout">
+        {login?<Link className="nav-logout" to="/logout">
           Logout
-        </Link>
-  
-        <Link className="nav-login" to="/login">
+        </Link>:<Link className="nav-login" to="/login">
           Login
-        </Link>
+        </Link>}      
+  
+        
       </div>
     );
   };
