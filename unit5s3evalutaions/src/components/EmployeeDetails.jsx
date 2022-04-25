@@ -28,8 +28,7 @@ export const EmployeeDetails = () => {
         <span className="user_salary">${userdata.salary}</span>
         <span className="tasks">
             
-              <li className="task">{userdata.tasks}</li>
-           
+              <li className="task">{userdata.tasks}</li>           
           
         </span>
         Status: <b className="status">{userdata.status}</b>
@@ -37,7 +36,6 @@ export const EmployeeDetails = () => {
         {/* Show this button only if user is not already terminated (users status is working) */}
         <button className="fire">Fire Employee</button>
         {/* Show this button only if user is not already team lead or terminated */}
-        
         <button className="promote">promote</button>
       </div>
     );
